@@ -1,0 +1,38 @@
+'''
+Esse programa calcula os numeros impares da sequencia de Fibonacci
+Aluno: Matheus Moreira do Nascimento
+DRE: 119042060
+Curso: Matemática Aplicada
+Disciplina: Topicos da Matemática Aplicada A
+'''
+print("................................................................................\n")
+print("Esse programa calcula a soma dos numeros impares de uma sequencia de Fibonacci")
+print("que não exceda 4 milhoes de numeros")
+print('Pra calcular o resultado digite "ver"')
+print("................................................................................\n")
+
+a=input("Digita ai")
+if a==str('ver'):
+
+    b=1
+    c=2
+
+    e=1
+    
+    f=3
+    while f<400001:
+        d=b+c
+        b=c
+        c=d
+        if d%2!=0:
+            e=e+d
+
+        f+=1
+   
+    print("A soma de todos os impares de uma sequencia de Fibonacci que não exceda os")
+    print("4 milhões de termos é:")
+    print("................................................................................")
+    print(e)
+    print("................................................................................")
+
+
