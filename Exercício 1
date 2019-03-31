@@ -1,0 +1,28 @@
+'''
+Esse programa calcula a soma dos digitos de 2^1001
+Aluno: Matheus Moreira do Nascimento
+DRE: 119042060
+Curso: Matemática Aplicada
+Disciplina: Topicos da Matemática Aplicada A
+'''
+
+print("................................................................................\n")
+print("Essa parada calcula a soma dos algarismos de 2^1001")
+print('Digite "ver" para obter o calculo\n')
+print("................................................................................\n")
+
+a=input("Digita ai")
+if a==str('ver'):
+    
+    n = 2**1001
+    m = int(0)
+
+    while n!=0:
+        r = n%10
+        n = (n-r)//10
+        m = (m+r)
+    
+    print("A soma dos algarismos de 2^1001 é :")
+    print("....")
+    print(m)
+    print("....")
