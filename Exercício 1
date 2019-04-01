@@ -15,7 +15,6 @@ while True:
     a=int(input("Digita ai "))
 
     f=2**a
-    n=a
     m = int(0)
 
     while f!=0:
@@ -23,7 +22,7 @@ while True:
         f = (f-r)//10
         m = (m+r)
     
-    print("A soma dos algarismos de 2 elevado a",n," é :")
+    print("A soma dos algarismos de 2 elevado a",a," é :")
     print(".............................................")
     print(m)
     print(".............................................\n")
