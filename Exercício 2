@@ -7,27 +7,38 @@ Disciplina: Topicos da Matemática Aplicada A
 '''
 print("................................................................................\n")
 print("Esse programa calcula a soma dos numeros impares de uma sequencia de Fibonacci")
-print("que não exceda 4 milhoes de numeros")
-print('Pra calcular o resultado digite "ver"')
+print("cujo valor dos termos na sequência não excedam um parametro escolhido por tu")
+print('Pra começar, escolhe um limite para os valores da sequência \n')
 print("................................................................................\n")
 
-a=input("Digita ai")
-if a==str('ver'):
+while True:
+    a=float(input("Fala ai o valor limite da sequência "))
 
     b=1
     c=2
 
     e=1
     d=0
-    while d<4000000:
+    while d<a:
         d=b+c
         b=c
         c=d
         if d%2!=0:
             e=e+d
 
-    print("A soma de todos os impares de uma sequencia de Fibonacci cujos termos ")
-    print("não excedam 4 milhoes é:")
-    print("........")
+    print("")
+    print("A soma de todos os impares de uma sequencia de Fibonacci cujos valor dos")
+    print("termos não excedam",int(a),"é:")
+    print("........................")
     print(e)
-    print("........")
+    print("........................\n")
+
+    print("Se tu quiser calcular com outra restrição")
+    f=str(input("digita 'sim', se não quiser, digita 'não' "))
+    if f!=str('sim'):
+        break
+    print("")
+    
+print("")   
+print("Suave")
+print("É nós")
