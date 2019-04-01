@@ -1,5 +1,5 @@
 '''
-Esse programa calcula a soma dos digitos de 2^1001
+Esse programa calcula a soma dos digitos das potências de 2
 Aluno: Matheus Moreira do Nascimento
 DRE: 119042060
 Curso: Matemática Aplicada
@@ -7,22 +7,22 @@ Disciplina: Topicos da Matemática Aplicada A
 '''
 
 print("................................................................................\n")
-print("Essa parada calcula a soma dos algarismos de 2^1001")
-print('Digite "ver" para obter o calculo\n')
+print("Essa parada calcula a soma dos algarismos das potências de 2")
+print('Pra começar, digita qual potência de 2 você quer \n')
 print("................................................................................\n")
 
-a=input("Digita ai")
-if a==str('ver'):
-    
-    n = 2**1001
-    m = int(0)
+a=int(input("Digita ai "))
 
-    while n!=0:
-        r = n%10
-        n = (n-r)//10
-        m = (m+r)
+f=2**a
+n=a
+m = int(0)
+
+while f!=0:
+    r = f%10
+    f = (f-r)//10
+    m = (m+r)
     
-    print("A soma dos algarismos de 2^1001 é :")
-    print("....")
-    print(m)
-    print("....")
+print("A soma dos algarismos de 2 elevado a",n," é :")
+print(".............................................")
+print(m)
+print(".............................................")
