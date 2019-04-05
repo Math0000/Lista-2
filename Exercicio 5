@@ -14,14 +14,14 @@ def soma():
     print("suave \n")
     
     for i in range(1,a+1):
-          i=int(input("Qual a coordenada do primeiro vetor u no R" +str(i)+" "))
+          i=float(input("Qual a coordenada do primeiro vetor u no R" +str(i)+" "))
           U .append(i)
     print("")
     print("u =", U)
     print("Fecho \n")
 
     for i in range(1,a+1):
-          i=int(input("Qual a coordenada do segundo vetor v no R" +str(i)+" "))
+          i=float(input("Qual a coordenada do segundo vetor v no R" +str(i)+" "))
           V .append(i)
     print("")
     print("v =", V)
@@ -45,14 +45,14 @@ def subtração():
     print("suave \n")
     
     for i in range(1,a+1):
-          i=int(input("Qual a coordenada do primeiro vetor u no R" +str(i)+" "))
+          i=float(input("Qual a coordenada do primeiro vetor u no R" +str(i)+" "))
           U .append(i)
     print("")
     print("u =", U)
     print("Fecho \n")
 
     for i in range(1,a+1):
-          i=int(input("Qual a coordenada do segundo vetor v no R" +str(i)+" "))
+          i=float(input("Qual a coordenada do segundo vetor v no R" +str(i)+" "))
           V .append(i)
     print("")
     print("v =", V)
