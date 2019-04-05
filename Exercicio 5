@@ -1,3 +1,11 @@
+'''
+Esse programa calcula os numeros impares da sequencia de Fibonacci
+Aluno: Matheus Moreira do Nascimento
+DRE: 119042060
+Curso: Matemática Aplicada
+Disciplina: Topicos da Matemática Aplicada A
+'''
+
 
 print("...................................................................... \n")
 print("Essa bagulho aqui é uma calculado vetorial simples que trabalha")
