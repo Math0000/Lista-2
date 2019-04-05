@@ -6,7 +6,6 @@ Curso: Matemática Aplicada
 Disciplina: Topicos da Matemática Aplicada A
 '''
 
-
 print("...................................................................... \n")
 print("Essa bagulho aqui é uma calculado vetorial simples que trabalha")
 print("somente com soma e subtração de 2 vetores no enesimo plano R ")
