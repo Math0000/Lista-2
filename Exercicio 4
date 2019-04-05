@@ -1,0 +1,139 @@
+Dici1 = {
+  0:'zero',
+  1:'um',
+  2:'dois',
+  3:'três',  
+  4:'quatro',
+  5:'cinco',
+  6:'seis',       
+  7:'sete',
+  8:'oito', 
+  9:'nove'}
+
+Dici2 = {
+  11:'onze',
+  12:'doze',
+  13:'treze',
+  14:'quatorze',
+  15:'quinze',
+  16:'dezesseis' ,       
+  17:'dezessete',
+  18:'dezoito',
+  19:'desenove'}
+
+Dici3 = {
+  10:'dez',
+  20:'vinte',
+  30:'trinta',
+  40:'quarenta',
+  50:'cinquenta',
+  60:'sessenta',
+  70:'setenta',
+  80:'oitenta',
+  90:'noventa'}
+
+Dici4 = {
+  2:'vinte e ',
+  3:'trinta e ',
+  4:'quarenta e ',
+  5:'cinquenta e ',
+  6:'sessenta e ',
+  7:'setenta e ',
+  8:'oitenta e ',
+  9:'noventa e '}
+
+Dici5= {
+  0:'',
+  1:'cento e ',
+  2:'duzentos e ',
+  3:'trezentos e ',  
+  4:'quatrocentos e ',
+  5:'quinhentos e ',
+  6:'seiscentos e ',       
+  7:'setecentos e ',
+  8:'oitocentos e ',
+  9:'novecentos e '}
+
+Dici6 = {
+  100:'cem',
+  200:'duzentos',
+  300:'trezentos',  
+  400:'quatrocentos',
+  500:'quinhentos',
+  600:'seiscentos',       
+  700:'setecentos',
+  800:'oitocentos',
+  900:'novecentos'}
+
+def dezenas(x):
+    if x < 10:
+        extenso = Dici1[x]
+        
+    elif x > 10 and x < 20:
+        extenso = Dici2[x]
+
+    elif x%10==0:
+        extenso = Dici3[x]
+
+    else:
+        resto = x%10
+        dezena = (x - resto)/10
+        extenso = Dici4[dezena] + Dici1[resto]
+    return (extenso)
+
+
+
+def cent(x):
+
+    if x%100==0:
+        extenso = Dici6[x]
+
+    else:
+        resto= x%100
+        centena = (x-resto)/100
+        extenso = Dici5[centena] + dezenas(resto)
+    return (extenso)
+
+
+def mil(x):
+    if x==1000:
+       print("mil")
+
+    elif x%1000==0:
+        num=x/1000
+        extenso = dezenas(num)+str(" mil")
+
+    elif x > 1000 and x<2000:
+        resto= x%1000
+        if resto%100:
+            extenso = str(" mil, ") + cent(resto)
+
+        else:
+            extenso = str(" mil e ") + cent(resto)
+
+    else:
+        resto= x%1000
+        if resto%100:
+            num = (x-resto)/1000
+            extenso = dezenas(num) + str(" mil e ") + cent(resto)
+
+        else:
+            num = (x-resto)/1000
+            extenso = dezenas(num) + str(" mil, ") + cent(resto)
+       
+    return (extenso)
+
+
+
+x = int(input(""))
+if x<100:
+    print(dezenas(x))
+
+elif x > 99 and x < 1000:
+    print(cent(x))
+
+elif x > 999 and x < 100000:
+    print(mil(x))
+
+else:
+    print("Esse numero é muito grande pro nosso banco de dados, ta maluco? Eu falei que só era valido até 99999 brother")
