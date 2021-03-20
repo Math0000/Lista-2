@@ -8,7 +8,7 @@ Disciplina: Topicos da Matemática Aplicada A
 
 print("................................................................................\n")
 print("Essa parada calcula a soma dos algarismos das potências de 2")
-print('Pra começar, digita qual potência de 2 você quer \n')
+print('Pra começar, digita qual potência de 2 você quer\n')
 print("................................................................................\n")
 
 while True:
